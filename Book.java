@@ -1,33 +1,22 @@
-package main;
+package workspace;
 
-public class Book {
-	
-	private String title;
-	private String publisher;
-	private int year;
-	
-	public Book(String title, String publisher, int year) {
-		this.title=title;
-		this.publisher=publisher;
-		this.year=year;
-	}
+public class Book implements ToBeStored {
 
-	public String title(){
-		return this.title;
+	private String writer;
+	private String name;
+	private double weight;
+	
+	public Book(String w, String n, double we) {
+		this.writer=w;
+		this.name= n;
+		this.weight= we;
 	}
 	
-	public String publisher(){
-		return this.publisher;
-	}
-	
-	public int year(){
-		return this.year;
+	public double weight() {
+		return this.weight;
 	}
 	
 	public String toString() {
-		return (this.title + ", " + this.publisher + ", " + this.year);
+		return(this.writer+ ": "+ this.name);
 	}
-	
-	
-	
 }
